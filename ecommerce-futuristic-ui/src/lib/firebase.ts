@@ -1,0 +1,1 @@
+// Firebase client config placeholder
