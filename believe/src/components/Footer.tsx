@@ -1,12 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
-  FacebookIcon,
   InstagramIcon,
-  TwitterIcon,
-  YoutubeIcon,
   MailIcon,
-  PhoneIcon,
   MapPinIcon,
   ArrowRightIcon,
 } from 'lucide-react'
@@ -60,8 +56,7 @@ export const Footer = () => {
             >
               Pushing the boundaries of design and technology to create products
               that inspire and elevate everyday living.
-            </motion.p>
-            <motion.div
+            </motion.p>            <motion.div
               className="flex space-x-4"
               initial={{
                 opacity: 0,
@@ -79,10 +74,10 @@ export const Footer = () => {
                 delay: 0.2,
               }}
             >
-              <SocialIcon icon={<FacebookIcon size={18} />} />
-              <SocialIcon icon={<InstagramIcon size={18} />} />
-              <SocialIcon icon={<TwitterIcon size={18} />} />
-              <SocialIcon icon={<YoutubeIcon size={18} />} />
+              <SocialIcon 
+                icon={<InstagramIcon size={18} />} 
+                href="https://www.instagram.com/believeinthedesigns/"
+              />
             </motion.div>
           </div>
           <div>
@@ -105,8 +100,7 @@ export const Footer = () => {
               }}
             >
               Quick Links
-            </motion.h4>
-            <motion.ul
+            </motion.h4>            <motion.ul
               className="space-y-3"
               initial={{
                 opacity: 0,
@@ -124,11 +118,10 @@ export const Footer = () => {
                 delay: 0.2,
               }}
             >
-              <FooterLink text="Home" href="#" />
-              <FooterLink text="Products" href="#products" />
-              <FooterLink text="Categories" href="#categories" />
-              <FooterLink text="About Us" href="#about" />
-              <FooterLink text="Contact" href="#contact" />
+              <FooterLink text="Products" href="/products" />
+              <FooterLink text="Categories" href="/categories" />
+              <FooterLink text="About Us" href="/about" />
+              <FooterLink text="Contact" href="/contact" />
             </motion.ul>
           </div>
           <div>
@@ -176,7 +169,7 @@ export const Footer = () => {
                   className="text-[#BD9526] mt-1 flex-shrink-0"
                 />
                 <span className="text-gray-400">
-                  123 Design Avenue, Innovation City, 10001
+                  Portmore, Jamaica
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -184,10 +177,16 @@ export const Footer = () => {
                 <span className="text-gray-400">
                   info@believeinthedesigns.com
                 </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <PhoneIcon size={18} className="text-[#BD9526] flex-shrink-0" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>              <div className="flex items-center space-x-3">
+                <InstagramIcon size={18} className="text-[#BD9526] flex-shrink-0" />
+                <a 
+                  href="https://www.instagram.com/believeinthedesigns/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#BD9526] transition-colors"
+                >
+                  believeinthedesigns
+                </a>
               </div>
             </motion.div>
           </div>
@@ -288,12 +287,15 @@ export const Footer = () => {
 }
 type SocialIconProps = {
   icon: React.ReactNode
+  href: string
 }
 
-const SocialIcon = ({ icon }: SocialIconProps) => {
+const SocialIcon = ({ icon, href }: SocialIconProps) => {
   return (
     <motion.a
-      href="#"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-[#BD9526] hover:text-black transition-colors"
       whileHover={{
         scale: 1.2,

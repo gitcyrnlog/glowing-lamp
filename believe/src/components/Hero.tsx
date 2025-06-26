@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { motion, useAnimation, Variants } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ArrowRightIcon } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export const Hero = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
@@ -83,47 +84,50 @@ export const Hero = () => {
             variants={itemVariants}
           >
             <span className="bg-gradient-to-r from-white via-[#BD9526] to-[#14452F] bg-clip-text text-transparent">
-              Future of Design
+              Future of Streetwear
             </span>
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl max-w-2xl mb-10 text-gray-300"
             variants={itemVariants}
           >
-            Discover revolutionary products that blend aesthetics with
+            Discover revolutionary clothing that blends aesthetics with
             innovation at BelieveInTheDesigns
-          </motion.p>
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            variants={itemVariants}
-          >
-            <motion.button
-              className="px-8 py-3 bg-[#BD9526] text-black font-medium rounded-full hover:bg-opacity-90 transition-all flex items-center gap-2 group"
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
+          </motion.p>            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              variants={itemVariants}
             >
-              Shop Now
-              <ArrowRightIcon
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </motion.button>
-            <motion.button
-              className="px-8 py-3 border border-[#14452F] hover:border-[#BD9526] text-white font-medium rounded-full transition-colors"
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
-            >
-              Learn More
-            </motion.button>
-          </motion.div>
+              <Link to="/products">
+                <motion.button
+                  className="px-8 py-3 bg-[#BD9526] text-black font-medium rounded-full hover:bg-opacity-90 transition-all flex items-center gap-2 group"
+                  whileHover={{
+                    scale: 1.05,
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                  }}
+                >
+                  Shop Now
+                  <ArrowRightIcon
+                    size={18}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </motion.button>
+              </Link>
+              <Link to="/about">
+                <motion.button
+                  className="px-8 py-3 border border-[#14452F] hover:border-[#BD9526] text-white font-medium rounded-full transition-colors"
+                  whileHover={{
+                    scale: 1.05,
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                  }}
+                >
+                  Learn More
+                </motion.button>
+              </Link>
+            </motion.div>
         </motion.div>
       </div>
       {/* Scroll indicator */}

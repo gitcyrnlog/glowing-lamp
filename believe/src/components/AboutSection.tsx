@@ -1,17 +1,20 @@
-import React, { useEffect, Children } from 'react'
+import React, { useEffect } from 'react'
 import { motion, useAnimation, easeOut } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+
 export const AboutSection = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+
   useEffect(() => {
     if (inView) {
       controls.start('visible')
     }
   }, [controls, inView])
+
   const containerVariants = {
     hidden: {},
     visible: {
@@ -20,6 +23,7 @@ export const AboutSection = () => {
       },
     },
   }
+
   const itemVariants = {
     hidden: {
       opacity: 0,
@@ -34,6 +38,7 @@ export const AboutSection = () => {
       },
     },
   }
+
   return (
     <section
       className="py-24 bg-black relative overflow-hidden"
@@ -73,12 +78,12 @@ export const AboutSection = () => {
             </motion.h2>
             <motion.p className="text-gray-300 mb-6" variants={itemVariants}>
               BelieveInTheDesigns was founded with a vision to merge
-              cutting-edge technology with timeless design principles. We
-              believe that the objects that surround us should not only be
+              cutting-edge vision with timeless design principles. We
+              believe that the clothes we wear should not only be
               functional but also inspire and elevate our daily experiences.
             </motion.p>
             <motion.p className="text-gray-300 mb-6" variants={itemVariants}>
-              Our team of designers and engineers work tirelessly to push the
+              Our team of designers work tirelessly to push the
               boundaries of what's possible, creating products that feel like
               they've been transported from the future to the present.
             </motion.p>
@@ -88,27 +93,27 @@ export const AboutSection = () => {
             >
               <motion.div variants={itemVariants} className="text-center">
                 <span className="block text-[#BD9526] text-4xl font-bold mb-2">
-                  10+
+                  2024
                 </span>
-                <span className="text-gray-400">Years of Innovation</span>
+                <span className="text-gray-400">Founded With Vision</span>
               </motion.div>
               <motion.div variants={itemVariants} className="text-center">
                 <span className="block text-[#BD9526] text-4xl font-bold mb-2">
-                  5000+
+                  1000+
                 </span>
-                <span className="text-gray-400">Happy Customers</span>
+                <span className="text-gray-400">Orders Shipped</span>
               </motion.div>
               <motion.div variants={itemVariants} className="text-center">
                 <span className="block text-[#BD9526] text-4xl font-bold mb-2">
-                  120+
+                  75+
                 </span>
-                <span className="text-gray-400">Design Awards</span>
+                <span className="text-gray-400">Customer Reviews</span>
               </motion.div>
               <motion.div variants={itemVariants} className="text-center">
                 <span className="block text-[#BD9526] text-4xl font-bold mb-2">
-                  300+
+                  6+
                 </span>
-                <span className="text-gray-400">Unique Products</span>
+                <span className="text-gray-400">Signature Pieces</span>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -121,14 +126,14 @@ export const AboutSection = () => {
             <div className="relative">
               <div className="aspect-square rounded-lg overflow-hidden border border-[#14452F]">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
+                  src="beeLeaf.jpg"
                   alt="Design Studio"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-2/3 aspect-square rounded-lg overflow-hidden border border-[#BD9526] z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1916&auto=format&fit=crop"
+                  src="blvLogo.jpg"
                   alt="Product Design"
                   className="w-full h-full object-cover"
                 />

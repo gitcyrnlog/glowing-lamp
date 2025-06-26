@@ -1,13 +1,32 @@
 import React from 'react'
+import AppRouter from './router'
+import './styles/globals.css'
+import { Toaster } from 'react-hot-toast'
 
 export function App() {
   return (
-    <div className="bg-black text-white w-full min-h-screen overflow-x-hidden">
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold">
-          This App component is not used in the current router setup.
-        </h1>
-      </div>
-    </div>
+    <>
+      <AppRouter />
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: '#333',
+            color: '#fff',
+          },
+          success: {
+            style: {
+              border: '1px solid #10B981',
+            },
+          },
+          error: {
+            style: {
+              border: '1px solid #EF4444',
+            },
+          },
+        }}
+      />
+    </>
   )
 }

@@ -31,38 +31,29 @@ export const CategoryShowcase = () => {
     triggerOnce: true,
     threshold: 0.1,
   })
+  
   useEffect(() => {
     if (inView) {
       controls.start('visible')
     }
   }, [controls, inView])
-  const categories = [
+    const categories = [
     {
       id: 1,
-      name: 'Furniture',
-      image:
-        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop',
-      count: 42,
+      name: 'True Believer',
+      image: '/TrueBeliever.jpg',
+      count: 18,
     },
     {
       id: 2,
-      name: 'Lighting',
-      image:
-        'https://images.unsplash.com/photo-1543198126-c78d613a8e9f?q=80&w=2070&auto=format&fit=crop',
-      count: 27,
-    },
-    {
-      id: 3,
-      name: 'Decor',
-      image:
-        'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1916&auto=format&fit=crop',
-      count: 35,
+      name: 'Believe in the Designs',
+      image: '/BelieveDesigns.jpg',
+      count: 24,
     },
   ]
-  return (
-    <section
+  return (    <section
       className="py-24 bg-gradient-to-b from-black to-[#14452F]/20 relative"
-      id="categories"
+      id="collections"
       ref={ref}
     >
       {/* Accent lines */}
@@ -78,20 +69,18 @@ export const CategoryShowcase = () => {
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-4"
             variants={itemVariants}
-          >
-            <span className="bg-gradient-to-r from-[#BD9526] to-[#14452F] bg-clip-text text-transparent">
-              Explore Categories
+          >            <span className="bg-gradient-to-r from-[#BD9526] to-[#14452F] bg-clip-text text-transparent">
+              Collections
             </span>
           </motion.h2>
           <motion.p
             className="text-gray-400 max-w-2xl mx-auto"
             variants={itemVariants}
           >
-            Discover our curated collections of design-forward products
+            Explore our designs
           </motion.p>
-        </motion.div>
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        </motion.div>        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -167,9 +156,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, variants, index }
         }}
       >
         <h3 className="text-2xl font-bold text-white mb-2">{category.name}</h3>
-        <p className="text-[#BD9526] mb-4">{category.count} products</p>
-        <div className="flex items-center text-white group-hover:text-[#BD9526] transition-colors">
-          <span className="mr-2">Explore collection</span>
+        <p className="text-[#BD9526] mb-4">{category.count} products</p>        <div className="flex items-center text-white group-hover:text-[#BD9526] transition-colors">
+          <span className="mr-2">View Collection</span>
           <motion.div
             initial={{
               x: 0,

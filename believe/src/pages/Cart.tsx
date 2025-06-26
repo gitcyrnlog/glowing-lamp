@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import { Header }from '../components/Header';
 import { useCart } from '../features/cart/CartContext';
 import { fonts } from '../styles/theme';
 
@@ -9,7 +9,7 @@ export default function Cart() {
   if (state.items.length === 0) {
     return (
       <div className="min-h-screen bg-black text-white">
-        <Navbar />
+        <Header />
         <main className="p-8 max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-8" style={{ fontFamily: 'Orbitron' }}>
             Your Cart
@@ -31,7 +31,7 @@ export default function Cart() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <Navbar />
+      <Header />
       <main className="p-8 max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-8" style={{ fontFamily: 'Orbitron' }}>
           Your Cart
