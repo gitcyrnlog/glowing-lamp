@@ -1,0 +1,16 @@
+{
+  "name": "glowing-lamp-workspace",
+  "version": "1.0.0",
+  "description": "Workspace root for multiple projects",
+  "scripts": {
+    "dev": "cd believe && npm run dev",
+    "dev:ecommerce": "cd ecommerce-futuristic-ui && npm run dev",
+    "build": "cd believe && npm run build",
+    "build:ecommerce": "cd ecommerce-futuristic-ui && npm run build",
+    "preview": "cd believe && npm run preview",
+    "preview:ecommerce": "cd ecommerce-futuristic-ui && npm run preview"
+  },
+  "keywords": ["ecommerce", "react", "typescript"],
+  "author": "",
+  "license": "MIT"
+}
