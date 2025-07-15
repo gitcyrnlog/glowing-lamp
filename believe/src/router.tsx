@@ -156,7 +156,9 @@ const router = createBrowserRouter([
     element: <AdminGuard><AdminPayments /></AdminGuard>,
     errorElement: <ErrorElement />,
   },
-]);
+], {
+  basename: '/glowing-lamp'
+});
 
 export default function AppRouter() {
   return (
