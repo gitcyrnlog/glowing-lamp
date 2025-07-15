@@ -408,7 +408,7 @@ class SiteConfigService {
   private getDefaultConfig(): SiteConfig {
     return {
       name: 'Believe in the Designs',
-      logo: '/logo.png',
+      logo: '/glowing-lamp/logo.png',
       favicon: '/favicon.ico',
       colors: {
         primary: '#BD9526',
@@ -424,7 +424,7 @@ class SiteConfigService {
       hero: {
         title: 'Premium Quality Apparel',
         subtitle: 'Exclusive designs for the true believers',
-        image: '/TrueBeliever.jpg',
+        image: '/glowing-lamp/TrueBeliever.jpg',
         buttonText: 'Shop Now',
         buttonLink: '/products'
       },

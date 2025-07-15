@@ -41,13 +41,13 @@ export const CategoryShowcase = () => {
     {
       id: 1,
       name: 'True Believer',
-      image: '/TrueBeliever.jpg',
+      image: '/glowing-lamp/TrueBeliever.jpg',
       count: 18,
     },
     {
       id: 2,
       name: 'Believe in the Designs',
-      image: '/BelieveDesigns.jpg',
+      image: '/glowing-lamp/BelieveDesigns.jpg',
       count: 24,
     },
   ]

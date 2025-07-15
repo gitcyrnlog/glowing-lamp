@@ -35,7 +35,7 @@ export const fallbackProducts: Product[] = [
   {
     id: '1',
     title: 'BITD "True Believer" Black T-Shirt',
-    image: '/TrueBeliever.jpg',
+    image: '/glowing-lamp/TrueBeliever.jpg',
     price: '$3000',
     category: 'T-Shirts',
     description: 'Premium quality True Believer black T-Shirt with unique design.',
@@ -46,7 +46,7 @@ export const fallbackProducts: Product[] = [
   {
     id: '2',
     title: 'BITD "True Believer" White T-Shirt',
-    image: '/WhiteTruBlv.jpg',
+    image: '/glowing-lamp/WhiteTruBlv.jpg',
     price: '$3000',
     category: 'T-Shirts',
     description: 'Premium quality True Believer white T-Shirt with unique design.',
@@ -57,7 +57,7 @@ export const fallbackProducts: Product[] = [
   {
     id: '3',
     title: 'Believe in the Designs T-Shirt, Black',
-    image: '/BelieveDesigns.jpg',
+    image: '/glowing-lamp/BelieveDesigns.jpg',
     price: '$3500',
     category: 'T-Shirts',
     description: 'Premium quality Believe in the Designs black T-Shirt.',

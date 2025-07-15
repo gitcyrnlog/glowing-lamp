@@ -17,7 +17,7 @@ export const fallbackCategories: Category[] = [
     id: 1,
     name: 'T-Shirts',
     description: 'Premium quality T-Shirts with unique designs and comfortable fabrics.',
-    image: '/TrueBeliever.jpg',
+    image: '/glowing-lamp/TrueBeliever.jpg',
     productCount: 3,
     status: 'available'
   },
