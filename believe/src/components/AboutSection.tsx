@@ -126,14 +126,14 @@ export const AboutSection = () => {
             <div className="relative">
               <div className="aspect-square rounded-lg overflow-hidden border border-[#14452F]">
                 <img
-                  src="beeLeaf.jpg"
+                  src="/glowing-lamp/beeLeaf.jpg"
                   alt="Design Studio"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-2/3 aspect-square rounded-lg overflow-hidden border border-[#BD9526] z-10">
                 <img
-                  src="blvLogo.jpg"
+                  src="/glowing-lamp/blvLogo.jpg"
                   alt="Product Design"
                   className="w-full h-full object-cover"
                 />

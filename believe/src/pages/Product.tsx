@@ -12,7 +12,7 @@ const mockProducts = {
   '1': {
     id: '1',
     title: 'BITD "True Believer" Black T-Shirt',
-    image: '/TrueBeliever.jpg',
+    image: '/glowing-lamp/TrueBeliever.jpg',
     price: '$3000',
     description: 'Premium BITD True Believer Black T-Shirt featuring our signature design. Made with high-quality fabric for comfort and durability.',
     sizes: ['S', 'M', 'L', 'XL'],
@@ -20,7 +20,7 @@ const mockProducts = {
   '2': {
     id: '2',
     title: 'BITD "True Believer" White T-Shirt',
-    image: '/WhiteTruBlv.jpg',
+    image: '/glowing-lamp/WhiteTruBlv.jpg',
     price: '$3000',
     description: 'Premium BITD True Believer White T-Shirt featuring our signature design. Classic white color with high-quality fabric for comfort and style.',
     sizes: ['S', 'M', 'L', 'XL'],
@@ -28,7 +28,7 @@ const mockProducts = {
   '3': {
     id: '3',
     title: 'Believe in the Designs T-Shirt, Black',
-    image: '/BelieveDesigns.jpg',
+    image: '/glowing-lamp/BelieveDesigns.jpg',
     price: '$3500',
     description: 'Believe in the Designs Black T-Shirt featuring our iconic logo. Premium quality material for everyday wear.',
     sizes: ['S', 'M', 'L', 'XL'],
