@@ -138,6 +138,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, variants, index }
           transition={{
             duration: 0.7,
           }}
+          onError={(e) => {
+            console.error('Image failed to load:', category.image);
+            e.currentTarget.style.display = 'none';
+          }}
+          onLoad={() => {
+            console.log('Image loaded successfully:', category.image);
+          }}
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80"></div>

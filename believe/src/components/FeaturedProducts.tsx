@@ -152,6 +152,13 @@ const ProductCard = ({ product, variants }: ProductCardProps) => {
               src={product.image}
               alt={product.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              onError={(e) => {
+                console.error('Image failed to load:', product.image);
+                e.currentTarget.style.display = 'none';
+              }}
+              onLoad={() => {
+                console.log('Image loaded successfully:', product.image);
+              }}
             />
           </div>
           <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
